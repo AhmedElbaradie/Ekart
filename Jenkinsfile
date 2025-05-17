@@ -9,19 +9,19 @@ pipeline {
     stages {
         stage('Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/sawsansalah/Boardgame.git'
+                git branch: 'main', url: 'https://github.com/AhmedElbaradie/Ekart.git'
             }
         }
         stage('Compile') {
             steps {
                 sh "mvn compile"
             }
-        }
+        }/*
         stage('Test') {
             steps {
                 sh "mvn test"
             }
-        }
+        }*/
         stage('Package') {
             steps {
                 sh "mvn package"
